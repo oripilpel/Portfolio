@@ -25,8 +25,10 @@ function renderProjects() {
                             <img class="img-fluid d-block mx-auto" src="${project.imgUrl}-full.png" alt="">
                                 <p>${project.desc}</p>
                                 <ul class="list-inline">
-                                    <li>Date: ${project.publishedAt}</li>
+                                    <li>Created At: ${new Date(project.publishedAt).toLocaleString()}</li>
                                     <li>Category: ${project.category}</li>
+                                    <li><button class="btn btn-success" data-dismiss="modal" type="button" onclick="window.location.href='${project.url}'">
+                                    Go Play</button></li>
                                 </ul>
                                 <button class="btn btn-primary" data-dismiss="modal" type="button">
                                     <i class="fa fa-times"></i>
